@@ -21,9 +21,9 @@ export default function EventsGrid() {
           <h2 className="gradient-text">Event Highlights</h2>
           <p>Explore the diverse tracks mapping the future.</p>
         </div>
-        <div className={styles.grid}>
-          {events.map((event, i) => (
-            <div key={event.id} className={`${styles.card} ${styles[event.size]}`}>
+        <div className={styles.uniformGrid}>
+          {events.map((event) => (
+            <div key={event.id} className={`${styles.card} ${styles.uniformCard}`}>
               <div className={styles.icon}>{event.icon}</div>
               <h3>{event.title}</h3>
               <p>{event.description}</p>
