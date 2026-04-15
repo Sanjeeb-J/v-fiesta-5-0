@@ -35,9 +35,9 @@ export default function Events() {
           ))}
         </div>
 
-        <div className={styles.grid}>
+        <div className={styles.uniformGrid}>
           {filteredEvents.map((event) => (
-            <div key={event.id} className={`${styles.card} ${styles[event.size]}`}>
+            <div key={event.id} className={`${styles.card} ${styles.uniformCard}`}>
               <div className={styles.icon}>{event.icon}</div>
               <h3>{event.title}</h3>
               <p>{event.description}</p>

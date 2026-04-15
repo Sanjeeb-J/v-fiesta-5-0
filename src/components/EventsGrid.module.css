@@ -20,6 +20,12 @@
   gap: 1.5rem;
 }
 
+.uniformGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
 .card {
   background: var(--color-bg-card);
   border-radius: 12px;
@@ -74,13 +80,28 @@
   font-size: 0.95rem;
 }
 
+.uniformCard {
+  min-height: 280px;
+  justify-content: flex-start;
+}
+
+.uniformCard .icon {
+  flex-grow: 0;
+}
+
+.uniformCard h3 {
+  margin-top: auto;
+}
+
 @media (max-width: 992px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
+  .uniformGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .large, .medium, .small { grid-column: auto; grid-row: auto; }
   .card:nth-child(1) { grid-column: span 2; }
 }
 
 @media (max-width: 768px) {
   .grid { grid-template-columns: 1fr; }
+  .uniformGrid { grid-template-columns: 1fr; }
   .card:nth-child(1) { grid-column: span 1; }
 }
